@@ -1,4 +1,5 @@
 using Acme.WhileLabelApp.Localization;
+using Microsoft.AspNetCore.Authorization;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Localization;
 using Volo.Abp.MultiTenancy;
@@ -11,8 +12,7 @@ public class WhileLabelAppPermissionDefinitionProvider : PermissionDefinitionPro
     {
         var myGroup = context.AddGroup(WhileLabelAppPermissions.GroupName);
 
-        //Define your own permissions here. Example:
-        //myGroup.AddPermission(WhileLabelAppPermissions.MyPermission1, L("Permission:MyPermission1"));
+        myGroup.AddPermission(WhileLabelAppPermissions.WhiteLabelSettings, L("Permission:WhiteLabelSettings"));
     }
 
     private static LocalizableString L(string name)
