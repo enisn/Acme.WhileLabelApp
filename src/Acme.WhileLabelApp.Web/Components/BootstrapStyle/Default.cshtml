@@ -1,0 +1,65 @@
+@model string
+@if (Model.IsNullOrEmpty())
+{
+    return;
+}
+<style>
+    body {
+        --primary-color: @Model;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        opacity: 0.8;
+    }
+
+    .btn-primary:focus {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(var(--primary-color), 0.25);
+    }
+
+    .bg-primary {
+        background-color: var(--primary-color);
+    }
+
+    .text-primary {
+        color: var(--primary-color);
+    }
+
+    .border-primary {
+        border-color: var(--primary-color);
+    }
+
+    .btn-outline-primary {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .btn-outline-primary:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .btn-outline-primary:focus {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        background-color: var(--primary-color);
+    }
+
+    .nav-link.active:hover {
+        background-color: var(--primary-color);
+        opacity: 0.8;
+    }
+</style>

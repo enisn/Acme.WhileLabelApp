@@ -52,6 +52,12 @@ using Volo.Abp.SettingManagement.Web;
 using Volo.Abp.Studio.Client.AspNetCore;
 using Volo.Abp.BlobStoring;
 using Volo.Abp.BlobStoring.Database;
+using Volo.Abp.SettingManagement;
+using Volo.Abp.SettingManagement.Web.Pages.SettingManagement;
+using Acme.WhileLabelApp.Web.Settings;
+using Acme.WhileLabelApp.Web.Bundling;
+using Volo.Abp.Ui.LayoutHooks;
+using Acme.WhileLabelApp.Web.Components.BootstrapStyle;
 
 namespace Acme.WhileLabelApp.Web;
 
@@ -152,12 +158,22 @@ public class WhileLabelAppWebModule : AbpModule
             options.IsDynamicPermissionStoreEnabled = true;
         });
 
+        Configure<SettingManagementPageOptions>(options =>
+        {
+            options.Contributors.Add(new WhiteLabelAppSettingPageContributor());
+        });
+
         Configure<AbpBlobStoringOptions>(options =>
         {
             options.Containers.ConfigureDefault(container =>
             {
                 container.UseDatabase();
             });
+        });
+
+        Configure<AbpLayoutHookOptions>(options =>
+        {
+            options.Add(LayoutHooks.Head.Last, typeof(BootstrapStyleViewComponent));
         });
     }
 
@@ -176,6 +192,7 @@ public class WhileLabelAppWebModule : AbpModule
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");
+                    bundle.AddContributors(typeof(WhiteLabelAppBundleContributor));
                 }
             );
 

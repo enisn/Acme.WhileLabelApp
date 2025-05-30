@@ -3,6 +3,7 @@ namespace Acme.WhileLabelApp.Permissions;
 public static class WhileLabelAppPermissions
 {
     public const string GroupName = "WhileLabelApp";
+    public const string WhiteLabelSettings = GroupName + ".WhiteLabelSettings";
 
 
     
