@@ -50,6 +50,8 @@ using Volo.Abp.OpenIddict;
 using Volo.Abp.Security.Claims;
 using Volo.Abp.SettingManagement.Web;
 using Volo.Abp.Studio.Client.AspNetCore;
+using Volo.Abp.BlobStoring;
+using Volo.Abp.BlobStoring.Database;
 
 namespace Acme.WhileLabelApp.Web;
 
@@ -148,6 +150,14 @@ public class WhileLabelAppWebModule : AbpModule
         Configure<PermissionManagementOptions>(options =>
         {
             options.IsDynamicPermissionStoreEnabled = true;
+        });
+
+        Configure<AbpBlobStoringOptions>(options =>
+        {
+            options.Containers.ConfigureDefault(container =>
+            {
+                container.UseDatabase();
+            });
         });
     }
 
