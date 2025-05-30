@@ -1,0 +1,105 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.BasicTheme": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.1.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.1.1",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Acme.WhileLabelApp.Application": {
+      "path": "src/Acme.WhileLabelApp.Application/Acme.WhileLabelApp.Application.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.Application.Tests": {
+      "path": "test/Acme.WhileLabelApp.Application.Tests/Acme.WhileLabelApp.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "Acme.WhileLabelApp.Domain.Shared": {
+      "path": "src/Acme.WhileLabelApp.Domain.Shared/Acme.WhileLabelApp.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.Application.Contracts": {
+      "path": "src/Acme.WhileLabelApp.Application.Contracts/Acme.WhileLabelApp.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.HttpApi": {
+      "path": "src/Acme.WhileLabelApp.HttpApi/Acme.WhileLabelApp.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.HttpApi.Client": {
+      "path": "src/Acme.WhileLabelApp.HttpApi.Client/Acme.WhileLabelApp.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.Web": {
+      "path": "src/Acme.WhileLabelApp.Web/Acme.WhileLabelApp.Web.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.Web.Tests": {
+      "path": "test/Acme.WhileLabelApp.Web.Tests/Acme.WhileLabelApp.Web.Tests.abppkg",
+      "folder": "test"
+    },
+    "Acme.WhileLabelApp.EntityFrameworkCore.Tests": {
+      "path": "test/Acme.WhileLabelApp.EntityFrameworkCore.Tests/Acme.WhileLabelApp.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "Acme.WhileLabelApp.EntityFrameworkCore": {
+      "path": "src/Acme.WhileLabelApp.EntityFrameworkCore/Acme.WhileLabelApp.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.TestBase": {
+      "path": "test/Acme.WhileLabelApp.TestBase/Acme.WhileLabelApp.TestBase.abppkg",
+      "folder": "test"
+    },
+    "Acme.WhileLabelApp.Domain.Tests": {
+      "path": "test/Acme.WhileLabelApp.Domain.Tests/Acme.WhileLabelApp.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "Acme.WhileLabelApp.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Acme.WhileLabelApp.HttpApi.Client.ConsoleTestApp/Acme.WhileLabelApp.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "Acme.WhileLabelApp.DbMigrator": {
+      "path": "src/Acme.WhileLabelApp.DbMigrator/Acme.WhileLabelApp.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "Acme.WhileLabelApp.Domain": {
+      "path": "src/Acme.WhileLabelApp.Domain/Acme.WhileLabelApp.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
